@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>web app upload_img</title>
+</head>
+<body>
+	<div id="add_photo_box">
+		<form action="">
+			<ul>
+				<li id="add_photo"></li>
+			</ul>
+		</form>
+	</div>
+	<script src="zepto.js"></script>
+	<script src="uploadimg.js"></script>
+	<script>
+	(function($){
+		$(function(){
+	        $("#add_photo").upload({
+	            action: "****.php",
+	            params: {
+	                isMain: 0
+	            },
+	            onChooseFile: function(img, context) {
+	               // 上传进度
+	            },
+	            onSubmit: function(data) {
+	               // form submit callback
+	            }
+	        })
+		});
+	})(Zepto);
+	</script>
+</body>
+</html>
